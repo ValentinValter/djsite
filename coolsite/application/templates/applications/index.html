@@ -1,0 +1,28 @@
+{% extends 'applications/base.html' %}
+
+{% block content %}
+<h1>{{title}}
+    {{ran}}
+    {{all_entries}}
+</h1>
+<table>
+  <tr>
+      <th>Name</th>
+      <th>Colour</th>
+      <th>Odo</th>
+  </tr>
+    <tr><td>Honda</td><td>черный</td><td>1120000</td></tr>
+
+</table>
+<table>
+{% for i in all_entries  %}
+  <tr>
+      <td>{{ i.Name }}</td>
+      <td>{{ i.Colour }}</td>
+      <td>{{ i.Odo }}</td>
+  </tr>
+{% endfor %}
+</table>
+
+<p>Содержимое главной страницы</p>
+{% endblock %}
